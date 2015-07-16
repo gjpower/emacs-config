@@ -11,7 +11,11 @@
 
 
 ;; Graeme custom options
-(tool-bar-mode -1)
+;; Only disable toolbar in graphic mode
+(if (display-graphic-p)
+    (progn
+      (tool-bar-mode -1)))
+
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'solarized t)
 
