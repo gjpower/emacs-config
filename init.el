@@ -16,8 +16,8 @@
     (progn
       (tool-bar-mode -1)))
 
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'solarized t)
+
 
 
 
@@ -49,6 +49,8 @@
 	    (package-install package)))
 	my-package-list))
 
+
+(load-theme 'solarized t)
 (ac-config-default)
 (yas-global-mode 1)
 (setq coffee-tab-width 2)
