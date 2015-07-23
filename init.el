@@ -36,7 +36,8 @@
 	yasnippet
 	zenburn-theme
 	rainbow-delimiters
-	smooth-scrolling))
+	smooth-scrolling
+	markdown-mode))
 
 (defun mygetpackages ()
   "Downloads all packages from my-package-list if any are missing"
