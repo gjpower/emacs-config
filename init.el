@@ -29,9 +29,37 @@
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 (package-initialize)
 
+(setq my-package-list
+      '(2048-game
+	auto-complete
+	coffee-mode
+	dash
+	multiple-cursors
+	solarized-theme
+	yasnippet
+	zenburn-theme
+	rainbow-delimiters
+	smooth-scrolling))
+
+(defun mygetpackages ()
+  "Downloads all packages from my-package-list if any are missing"
+  (interactive)
+  (mapc (lambda (package)
+	  (unless (package-installed-p package)
+	    (package-install package)))
+	my-package-list))
+
 (ac-config-default)
 (yas-global-mode 1)
+(setq coffee-tab-width 2)
+(setq c-default-style "stroustrup")
 
+;; Mode hooks
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+
+
+;; Key commands
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
