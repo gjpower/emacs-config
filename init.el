@@ -4,7 +4,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(backup-by-copying t)
- '(frame-background-mode (quote dark))
  '(global-linum-mode t)
  '(inhibit-startup-screen t)
  '(make-backup-files nil))
@@ -15,8 +14,6 @@
 (if (display-graphic-p)
     (progn
       (tool-bar-mode -1)))
-
-(load-theme 'solarized t)
 
 
 
@@ -50,7 +47,7 @@
 	my-package-list))
 
 
-(load-theme 'solarized t)
+(load-theme 'solarized-dark t)
 (ac-config-default)
 (yas-global-mode 1)
 (setq coffee-tab-width 2)
