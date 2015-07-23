@@ -37,7 +37,8 @@
 	zenburn-theme
 	rainbow-delimiters
 	smooth-scrolling
-	markdown-mode))
+	markdown-mode
+	flycheck))
 
 (defun mygetpackages ()
   "Downloads all packages from my-package-list if any are missing"
@@ -57,7 +58,7 @@
 ;; Mode hooks
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
-
+(add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;; Key commands
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
