@@ -6,7 +6,10 @@
  '(backup-by-copying t)
  '(global-linum-mode t)
  '(inhibit-startup-screen t)
- '(make-backup-files nil))
+ '(make-backup-files nil)
+ '(package-selected-packages
+   (quote
+    (smart-tabs-mode zenburn-theme yasnippet solarized-theme smooth-scrolling rainbow-delimiters multiple-cursors markdown-mode flycheck coffee-mode auto-complete 2048-game))))
 
 
 ;; Graeme custom options
@@ -38,10 +41,11 @@
 	rainbow-delimiters
 	smooth-scrolling
 	markdown-mode
-	flycheck))
+	flycheck
+	smart-tabs-mode))
 
 (defun mygetpackages ()
-  "Downloads all packages from my-package-list if any are missing"
+  "Downloads all packages from my-package-list if any are missing."
   (interactive)
   (mapc (lambda (package)
 	  (unless (package-installed-p package)
@@ -54,6 +58,7 @@
 (yas-global-mode 1)
 (setq coffee-tab-width 2)
 (setq c-default-style "stroustrup")
+(setq-default indent-tabs-mode nil)
 
 ;; Mode hooks
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
