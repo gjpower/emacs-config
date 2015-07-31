@@ -42,7 +42,8 @@
 	smooth-scrolling
 	markdown-mode
 	flycheck
-	smart-tabs-mode))
+	smart-tabs-mode
+        birds-of-paradise-plus-theme))
 
 (defun mygetpackages ()
   "Downloads all packages from my-package-list if any are missing."
@@ -53,7 +54,7 @@
 	my-package-list))
 
 
-(load-theme 'solarized-dark t)
+(load-theme 'birds-of-paradise-plus t)
 (ac-config-default)
 (yas-global-mode 1)
 (setq coffee-tab-width 2)
