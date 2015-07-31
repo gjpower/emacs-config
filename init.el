@@ -55,6 +55,8 @@
 (setq coffee-tab-width 2)
 (setq c-default-style "stroustrup")
 
+(electric-indent-mode -1)
+
 ;; Mode hooks
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
