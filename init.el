@@ -60,6 +60,7 @@
 (setq coffee-tab-width 2)
 (setq c-default-style "stroustrup")
 (setq-default indent-tabs-mode nil)
+(setq column-number-mode t)
 
 (electric-indent-mode -1)
 
