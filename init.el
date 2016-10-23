@@ -58,11 +58,13 @@
 (ac-config-default)
 (yas-global-mode 1)
 (setq coffee-tab-width 2)
-(setq c-default-style "stroustrup")
-(setq-default indent-tabs-mode nil)
+(setq c-default-style "linux")
+(setq-default c-basic-offset 4
+              tab-width 4
+              indent-tabs-mode nil)
 (setq column-number-mode t)
 
-(electric-indent-mode -1)
+;;(electric-indent-mode -1)
 
 ;; Mode hooks
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
