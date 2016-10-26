@@ -4,6 +4,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(backup-by-copying t)
+ '(custom-safe-themes
+   (quote
+    ("4e753673a37c71b07e3026be75dc6af3efbac5ce335f3707b7d6a110ecb636a3" default)))
  '(global-linum-mode t)
  '(inhibit-startup-screen t)
  '(make-backup-files nil)
@@ -43,7 +46,7 @@
 	markdown-mode
 	flycheck
 	smart-tabs-mode
-        birds-of-paradise-plus-theme))
+    birds-of-paradise-plus-theme))
 
 (defun mygetpackages ()
   "Downloads all packages from my-package-list if any are missing."
@@ -54,7 +57,8 @@
 	my-package-list))
 
 
-(load-theme 'birds-of-paradise-plus t)
+;; (load-theme 'birds-of-paradise-plus t)
+(load-theme 'zenburn t)
 (ac-config-default)
 (yas-global-mode 1)
 (setq coffee-tab-width 2)
@@ -76,3 +80,9 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
