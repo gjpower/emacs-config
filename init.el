@@ -12,7 +12,7 @@
  '(make-backup-files nil)
  '(package-selected-packages
    (quote
-    (smart-tabs-mode zenburn-theme yasnippet solarized-theme smooth-scrolling rainbow-delimiters multiple-cursors markdown-mode flycheck coffee-mode auto-complete 2048-game))))
+    (smart-tabs-mode zenburn-theme yasnippet solarized-theme smooth-scrolling rainbow-delimiters multiple-cursors markdown-mode flycheck coffee-mode auto-complete 2048-game clojure-mode cider))))
 
 
 ;; Graeme custom options
@@ -46,7 +46,9 @@
 	markdown-mode
 	flycheck
 	smart-tabs-mode
-    birds-of-paradise-plus-theme))
+    birds-of-paradise-plus-theme
+	clojure-mode
+	cider))
 
 (defun mygetpackages ()
   "Downloads all packages from my-package-list if any are missing."
