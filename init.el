@@ -12,7 +12,7 @@
  '(make-backup-files nil)
  '(package-selected-packages
    (quote
-    (smart-tabs-mode zenburn-theme yasnippet solarized-theme smooth-scrolling rainbow-delimiters multiple-cursors markdown-mode flycheck coffee-mode auto-complete 2048-game clojure-mode cider))))
+    (cyberpunk-theme paredit smart-tabs-mode zenburn-theme yasnippet solarized-theme smooth-scrolling rainbow-delimiters multiple-cursors markdown-mode flycheck coffee-mode auto-complete 2048-game clojure-mode cider))))
 
 
 ;; Graeme custom options
@@ -48,7 +48,8 @@
 	smart-tabs-mode
     birds-of-paradise-plus-theme
 	clojure-mode
-	cider))
+	cider
+    cyberpunk-theme))
 
 (defun mygetpackages ()
   "Downloads all packages from my-package-list if any are missing."
@@ -60,7 +61,8 @@
 
 
 ;; (load-theme 'birds-of-paradise-plus t)
-(load-theme 'zenburn t)
+;; (load-theme 'tango-dark t)
+(add-hook 'after-init-hook (lambda () (load-theme 'cyberpunk t)))
 (ac-config-default)
 (yas-global-mode 1)
 (setq coffee-tab-width 2)
