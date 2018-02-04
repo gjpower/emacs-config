@@ -12,7 +12,7 @@
  '(make-backup-files nil)
  '(package-selected-packages
    (quote
-    (cyberpunk-theme paredit smart-tabs-mode zenburn-theme yasnippet solarized-theme smooth-scrolling rainbow-delimiters multiple-cursors markdown-mode flycheck coffee-mode auto-complete 2048-game clojure-mode cider))))
+    (flycheck-rust toml-mode ac-html cyberpunk-theme paredit smart-tabs-mode zenburn-theme yasnippet solarized-theme smooth-scrolling rainbow-delimiters multiple-cursors markdown-mode flycheck coffee-mode auto-complete 2048-game clojure-mode cider))))
 
 
 ;; Graeme custom options
@@ -78,6 +78,7 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'after-init-hook #'global-flycheck-mode)
+(add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
 
 ;; Key commands
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
