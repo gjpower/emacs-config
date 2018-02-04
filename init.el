@@ -65,6 +65,7 @@
 (add-hook 'after-init-hook (lambda () (load-theme 'cyberpunk t)))
 (ac-config-default)
 (yas-global-mode 1)
+ (show-paren-mode 1)
 (setq coffee-tab-width 2)
 (setq c-default-style "linux")
 (setq-default c-basic-offset 4
