@@ -49,7 +49,9 @@
     birds-of-paradise-plus-theme
 	clojure-mode
 	cider
-    cyberpunk-theme))
+    cyberpunk-theme
+    flycheck-rust
+    toml-mode))
 
 (defun mygetpackages ()
   "Downloads all packages from my-package-list if any are missing."
@@ -80,7 +82,10 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'after-init-hook #'global-flycheck-mode)
-(add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
+
+(when (require 'flycheck-rust nil 'noerror)
+  (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
+
 
 ;; Key commands
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
