@@ -64,6 +64,7 @@
 ;; (load-theme 'tango-dark t)
 (add-hook 'after-init-hook (lambda () (load-theme 'cyberpunk t)))
 (ac-config-default)
+(add-to-list 'ac-modes 'rust-mode)
 (yas-global-mode 1)
  (show-paren-mode 1)
 (setq coffee-tab-width 2)
